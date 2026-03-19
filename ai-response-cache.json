@@ -1,0 +1,56 @@
+{
+  "matchScore": 92,
+  "technicalQuestions": [
+    {
+      "question": "Describe your approach to designing REST APIs for a new feature, specifically focusing on how you ensure modularity and maintainability in an Express.js application.",
+      "intention": "To assess the candidate's understanding of API design principles, modular architecture, and Express.js best practices.",
+      "answer": "I typically separate routes, controllers, and services. Routes define endpoints, controllers handle request/response, and services encapsulate business logic.\nThis promotes single responsibility and easier testing/updates."
+    },
+    {
+      "question": "You mentioned integrating Cloudinary and Google GenAI SDK. Can you explain a challenge you faced during a third-party SDK integration and how you resolved it?",
+      "intention": "To evaluate problem-solving skills, experience with external integrations, and debugging capabilities.",
+      "answer": "A common challenge is managing API keys securely and handling rate limits. I resolved this by using environment variables for keys and implementing retry logic with exponential backoff for rate-limited calls.\nError handling for SDK failures also needs careful implementation."
+    },
+    {
+      "question": "In your YouTube Clone project, you built authentication flows. What specific technologies or strategies did you use for user authentication and authorization, and why?",
+      "intention": "To understand the candidate's knowledge of security best practices in web applications.",
+      "answer": "I primarily used JWT (JSON Web Tokens) for authentication, combined with bcrypt for password hashing. JWTs offer stateless authentication, suitable for scalable APIs.\nFor authorization, I implemented middleware to check user roles or ownership before allowing access to certain resources."
+    }
+  ],
+  "behavioralQuestions": [
+    {
+      "question": "You highlighted being an effective team collaborator. Can you share an example of a time you had to resolve a technical disagreement within your team to move a project forward?",
+      "intention": "To assess teamwork, communication, and conflict resolution skills.",
+      "answer": "In Mini Mart, we disagreed on a frontend-backend data contract. I facilitated a discussion, presenting pros and cons of both approaches, and we reached a consensus based on future scalability.\nClear communication and understanding different perspectives were key."
+    },
+    {
+      "question": "Describe a situation where you had to debug a complex issue in a production environment. What was your process, and what did you learn from it?",
+      "intention": "To gauge debugging methodology, composure under pressure, and learning from experience.",
+      "answer": "I once debugged an intermittent error in a payment integration. I used logging, step-by-step tracing, and isolated components to pinpoint a race condition.\nI learned the importance of robust error logging and meticulous attention to asynchronous operations."
+    },
+    {
+      "question": "You mention being an 'adaptable and consistent learner.' How do you stay updated with new technologies and best practices in the MERN stack ecosystem?",
+      "intention": "To evaluate proactive learning, initiative, and commitment to professional development.",
+      "answer": "I regularly follow tech blogs, attend webinars, and experiment with new libraries on personal projects. I also actively participate in developer communities to learn from others' experiences.\nConsistent practice and building small prototypes help solidify new concepts."
+    }
+  ],
+  "skillsGap": [
+    {
+      "skill": "Advanced React.js concepts (e.g., hooks, performance optimization, testing)",
+      "severity": "low",
+      "type": "frontend"
+    },
+    {
+      "skill": "Deployment strategies (e.g., Docker, CI/CD, specific cloud platforms)",
+      "severity": "medium",
+      "type": "devops"
+    },
+    {
+      "skill": "In-depth knowledge of different authentication/authorization patterns beyond basic JWT",
+      "severity": "medium",
+      "type": "backend"
+    }
+  ],
+  "preparationTips": "To further strengthen your candidacy, consider deepening your knowledge in advanced React.js concepts like custom hooks, performance optimization, and testing methodologies. Be ready to discuss specific deployment strategies beyond environment variable management, such as Docker, CI/CD pipelines, or experience with cloud platforms like AWS or Heroku. Additionally, prepare to elaborate on various authentication and authorization patterns, including OAuth, session management, and role-based access control, with practical examples. Review system design principles for scalable MERN applications and be prepared to articulate trade-offs.",
+  "overallFeedback": "Murari presents as a strong backend-focused MERN stack developer with solid experience in Node.js, Express.js, and MongoDB. The projects demonstrate practical application of skills, including API design, third-party integration, and authentication. Strengths include a focus on modular architecture, debugging, and collaborative skills. Areas for development include demonstrating deeper expertise in advanced React.js features, detailed deployment processes (CI/CD, containerization), and a broader understanding of various authentication and authorization schemes. Overall, a promising candidate with a good foundation."
+}
