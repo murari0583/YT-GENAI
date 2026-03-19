@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap');
+
+.home {
+    --bg-top: #fff8ee;
+    --bg-bottom: #ffe7d1;
+    --panel: rgba(255, 255, 255, 0.82);
+    --ink: #17233a;
+    --muted: #5b6b86;
+    --line: #d8e2f2;
+    --accent: #0a84ff;
+    --accent-dark: #0a63bf;
+
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+    font-family: 'DM Sans', sans-serif;
+}
+
+.home__glow {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border-radius: 999px;
+    filter: blur(60px);
+    opacity: 0.45;
+    pointer-events: none;
+}
+
+.home__glow--one {
+    top: -90px;
+    left: -120px;
+    background: #ffb76b;
+}
+
+.home__glow--two {
+    right: -140px;
+    bottom: -110px;
+    background: #ff8f8f;
+}
+
+.home__panel {
+    width: min(980px, 100%);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    background: var(--panel);
+    backdrop-filter: blur(12px);
+    border-radius: 24px;
+    box-shadow: 0 24px 60px rgba(25, 49, 94, 0.14);
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.home__header {
+    margin-bottom: 20px;
+
+    h1 {
+        margin: 6px 0 10px;
+        color: var(--ink);
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: clamp(1.5rem, 2.1vw, 2.1rem);
+        letter-spacing: -0.02em;
+    }
+}
+
+.home__eyebrow {
+    margin: 0;
+    color: var(--accent-dark);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.75rem;
+}
+
+.home__subtitle {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.5;
+    max-width: 70ch;
+}
+
+.interview-form {
+    display: grid;
+    gap: 16px;
+}
+
+.interview-form__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.interview-form__field,
+.interview-form__upload {
+    display: grid;
+    gap: 8px;
+
+    label {
+        color: var(--ink);
+        font-weight: 600;
+        font-size: 0.95rem;
+    }
+}
+
+.interview-form__field textarea {
+    min-height: 220px;
+    resize: vertical;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 14px;
+    font: inherit;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 4px rgba(10, 132, 255, 0.12);
+    }
+}
+
+.interview-form__upload input[type='file'] {
+    border: 1px dashed #9eb2d8;
+    background: #f7faff;
+    border-radius: 14px;
+    padding: 12px;
+    color: var(--muted);
+}
+
+.generate-btn {
+    justify-self: start;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #0a84ff 0%, #1068d6 100%);
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    padding: 12px 22px;
+    cursor: pointer;
+    transition: transform 0.16s ease, box-shadow 0.16s ease;
+
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 20px rgba(16, 104, 214, 0.26);
+    }
+
+    &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+    .generate-btn--secondary {
+        background: linear-gradient(135deg, #00a485 0%, #0b8f78 100%);
+    }
+
+    .home__actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+.interview-form__error {
+    margin: 0;
+    color: #b3261e;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .home__panel {
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .interview-form__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .interview-form__field textarea {
+        min-height: 170px;
+    }
+
+    .generate-btn {
+        width: 100%;
+        justify-self: stretch;
+    }
+
+    .home__actions {
+        width: 100%;
+    }
+}
