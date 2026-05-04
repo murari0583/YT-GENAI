@@ -40,6 +40,14 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
 
+app.get('/', (req, res) => {
+    return res.status(200).json({
+        message: 'YT-GENAI Backend is running',
+        service: 'yt-genai-backend',
+        version: '1.0.0'
+    });
+});
+
 app.get('/health', (req, res) => {
     return res.status(200).json({
         status: 'ok',
